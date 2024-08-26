@@ -1,0 +1,114 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 80px;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+   
+        }
+        table, th, td {
+          
+            margin-left: 10%;
+            
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #121212;
+        }
+        button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(24, 24, 24)">
+    <h1 style="color:white">TypeScript</h1>
+
+    <form id="studentForm " style="margin-left: 17%;" method="post">
+        <label for="firstName" style="color:white"> Name:</label><br>
+        <input type="text" style="width: 800px;" id="name" name="name" ><br><br>
+        <label for="age" style="color:white">Age:</label><br>
+        <input type="number"  style="width: 800px;" id="lastName" name="age" ><br><br>
+        <label for="grade" style="color:white">Grade:</label><br>
+        <input type="number" style="width: 800px;" id="rollNo" name="grade" ><br><br>
+        <button class="btn btn-success" type="submit" style="background-color: green;" id="studentForm" >Submit</button>
+    </form>
+
+    <table>
+        <thead >
+            <tr>
+                <th style="color:white"> Name </th>
+                <th style="color:white"> Age </th>
+                <th style="color:white"> Grade</th>
+                <th style="color:white; padding-left:12%;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach(student => { %>
+                <tr>
+                    <!-- <td type="hiddem" style="color:rgb(174, 174, 174)"><%= student.name %></td> -->
+
+                    <td style="color:rgb(174, 174, 174)"><%= student.name %></td>
+                    <td style="color:rgb(174, 174, 174)"><%= student.age %></td>
+                    <td style="color:rgb(174, 174, 174)"><%= student.grade %></td>
+                    <td style="padding-left:12%;">
+
+                      
+
+   
+                        <button><a href="edit?id=<%= student._id %>" class="action-button">Edit</a></button>
+                        <!-- <button  class="action-button" id="editbutton" type="submit" onclick="edit('<%= student._id %>')">Edit</button> -->
+                        <button class="action-button" id="deletebutton" type="submit" onclick="deleting('<%=student. _id %>')">Delete</button>
+                       
+                    </td>
+                </tr>
+            <% }); %>
+    </table>
+<style>
+    .action-button {
+    cursor: pointer;
+}
+</style>
+    <script>
+      async  function deleting(id){
+            try {
+                const response = await fetch('/studentdelete', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id }) 
+        });
+        const result = await response.json();
+        if (response.ok,result) {
+            window.location.reload();
+        } else {
+            console.error('Error deleting student:');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+        }
+    
+    </script>
+
+
+
+</body>
+</html>
