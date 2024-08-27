@@ -3,6 +3,7 @@
 // let age: number = 25;
 // let isStudent: boolean = true;
 // let numbers: number[] = [1, 2, 3, 4, 5];
+// let number :[number,number][]=[[1,2],[3,4],[5,6]]
 // let person: [string, number] = ["Alice", 30];
 
 //-----------function----
@@ -23,6 +24,7 @@
 //     year?: number; 
 //   }
 //   let myCar: Car = { make: "Toyota", model: "Camry" };
+
   
 //====================interface======================
 // interface Person {
@@ -63,9 +65,7 @@
 //==========================return promise in typescript===========================================
 // function fetchData(): Promise<string> {
 //     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
 //             resolve("Data received");
-//         }, 2000);
 //     });
 // }
 // fetchData().then(data => console.log(data));
@@ -136,6 +136,7 @@
 //   }
 //   type PersonDetails = Name & Age;
 //   let person: PersonDetails = { name: "John", age: 30 };
+//   console.log(person)
   //==========================utility operators========================
 
 //---extract
@@ -198,3 +199,26 @@
 //   let user = { name: "John", age: 25 };
 //   let updatedUser = updateUser(user, { age: 26 });
   
+//------------------conditional types
+// function isSampleArray<T>(value: T): Sample<T> {
+//     return Array.isArray(value) as Sample<T>;
+// }
+
+// console.log(isSampleArray([1, 2, 3]));
+// console.log(isSampleArray(42));
+
+//-------------------------------
+
+// let num: number = 100; // Use a different variable name instead of 'var'
+
+// for (let i = 0; i < 30; i++) {
+//     num = num - i; // Subtract 'i' from 'num'
+//     console.log(num); // Output the value of 'num'
+// }
+//----------------as string
+// let x: any = 'hello';
+// console.log((x as string).length);
+//----------type assertion
+// let someValue: any = "This is a string";
+// let strLength: number = (someValue as string).length;
+// console.log(strLength); 
