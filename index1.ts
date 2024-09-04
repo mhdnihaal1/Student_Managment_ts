@@ -4,9 +4,10 @@
 // let isStudent: boolean = true;
 // let numbers: number[] = [1, 2, 3, 4, 5];
 // let number :[number,number][]=[[1,2],[3,4],[5,6]]
+// let num :(number|string)[]=[1,'dfg']
 // let person: [string, number] = ["Alice", 30];
 
-//-----------function----
+//---------------------function----------------
 // function greet(name: string): string {
 //     return `Hello, ${name}!`;
 //   }
@@ -26,7 +27,7 @@
 //   let myCar: Car = { make: "Toyota", model: "Camry" };
 
   
-//====================interface======================
+// ==========interface======================
 // interface Person {
 //     name: string;
 //     age: number;
@@ -55,12 +56,12 @@
 //     }
 // }
 // class Cars extends Car{
-//     sounds():void{
+//     sound():void{
 //         console.log('trunununun')
 //     }
 // }
 // const ne = new Cars()
-// ne.sounds()
+// ne.sound()
 
 //==========================return promise in typescript===========================================
 // function fetchData(): Promise<string> {
@@ -107,7 +108,7 @@
     //=====================interface with class
     // interface Drivable {
     //     drive(): void;
-    //   }
+    // }
       
     //   class Car implements Drivable {
     //     drive(): void {
@@ -126,8 +127,11 @@
 //     }
 //   }
 //   let john = new Person("John");
+//   let johns = new Person("Joh");
 
-//===========================intersection type
+//   console.log(johns.name="shdh")
+
+//===============intersection type
 // interface Name {
 //     name: string;
 //   }
@@ -142,6 +146,7 @@
 //---extract
 //   type Colors = "red" | "green" | "blue";
 // type PrimaryColors = Extract<Colors, "red" | "blue">; 
+
 
 //----Exclude
 // type Colors = "red" | "green" | "blue";
@@ -163,7 +168,7 @@
 //     email: string;
 //   }
 //   type UserWithoutEmail = Omit<User, "email">;
-//   const user: UserWithoutEmail = { name: "John", age: 25 };
+//   const user: UserWithoutEmail = { name: "John", age:20 };
   
 //-----pick
 // interface User {
@@ -207,18 +212,18 @@
 // console.log(isSampleArray([1, 2, 3]));
 // console.log(isSampleArray(42));
 
-//-------------------------------
 
-// let num: number = 100; // Use a different variable name instead of 'var'
-
-// for (let i = 0; i < 30; i++) {
-//     num = num - i; // Subtract 'i' from 'num'
-//     console.log(num); // Output the value of 'num'
-// }
 //----------------as string
-// let x: any = 'hello';
+// let x: unknown = 'hello';
 // console.log((x as string).length);
-//----------type assertion
+//----------type assertion 
 // let someValue: any = "This is a string";
 // let strLength: number = (someValue as string).length;
 // console.log(strLength); 
+//---------------------------
+
+// let samp :unknown = '1234';
+// let sa:number = (samp as string).length;
+
+// console.log(typeof sa,typeof samp)
+
