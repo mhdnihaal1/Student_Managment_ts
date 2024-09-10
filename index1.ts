@@ -14,6 +14,7 @@
 //   let greeting: string = greet("Alice");
 
 //------------union types
+
 // let value: string | number;
 // value = "Hello";
 // value = 42;
@@ -98,7 +99,7 @@
 //   console.log(john.name); 
 //   console.log(john.getAge());
 
-//--------------------------------generics
+//--------------------------------generics-----------
 // function identity<T>(arg: T): T {
 //     return arg;
 //   }

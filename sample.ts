@@ -73,6 +73,7 @@
 //     age:'20',
 //     place:'calicut'
 // }
+//---------------------------------------
 
 // class curr implements sam{
 //     name:string;
@@ -84,7 +85,7 @@
 // }
 // }
 // console.log(user.place)
-
+//----------------------------------
 // abstract class cley{
 // abstract clu():number;
 // abstract name:string;
@@ -95,16 +96,18 @@
 // }
 // name = 'kdsfgksd' 
 // }
+//---------------------------------------
 
 // interface sample{
 //     gender:'string';
 
 // }
-
 // type gender = ['male','female']
 // const party:sample={
 //     gender:"string"
 // }
+
+//----------------------------------------
 
 // class sample{
 //     add(num1:number,num2:number):number;
@@ -121,6 +124,7 @@
 // const sa = new sample()
 // console.log(sa.add(1,2,3))
 
+//-----------------------------------
 
 // class first{
 //   sound():void{
@@ -135,10 +139,9 @@
 // const sa = new second()
 // sa.sound()
 
+//-----------------------------------
 
-
-
-type gender = 'male'|'female';
-const sa :gender="male";
-console.log(sa)
+// type gender = 'male'|'female';
+// const sa :gender="male";
+// console.log(sa)
 
