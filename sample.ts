@@ -3,7 +3,6 @@
 // interface User{
 // name:string;
 // age:number;
-
 // }
 
 // function sample(user:User):Promise<User|void>{
@@ -12,7 +11,6 @@
 //         }else{
 //         return Promise.resolve();
 //     }
-
 // }
 // const user:User ={
 //     name:'nihal',
@@ -32,12 +30,9 @@
 //         console.log(`access allowed ${role} for ${actions} `)
 //     }else{
 //         console.log(`access not allowed ${role} for ${actions} `)
-
 //     }
 // }
-
-// action('user','create')
-
+//  action('user','create')
 // 
 
 //=====================================
